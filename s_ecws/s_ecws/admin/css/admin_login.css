@@ -1,0 +1,36 @@
+﻿.signIn {
+    align-items: center;
+    background-color: #F6F6F6;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 45vh;
+    justify-content: center;
+    max-width: 768px;
+    width: 768px;
+}
+
+
+    .signIn input {
+        width: 220px;
+        margin: 0 0 12px 0;
+    }
+
+    .signIn .btn {
+        width: 120px;
+    }
+
+
+
+
+
+
+.admin_login_form {
+    /*background-color: powderblue;*/
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

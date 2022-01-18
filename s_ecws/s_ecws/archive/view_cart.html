@@ -1,0 +1,82 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user/user.Master" AutoEventWireup="true" CodeBehind="view_cart.aspx.cs" Inherits="s_ecws.user.view_cart" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
+    <asp:Repeater ID="d1" runat="server">
+        <HeaderTemplate>
+
+            <table>
+
+                <tr style="text-align:center">
+                    <td>Product Image</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <%--            <tr>
+                <td>
+                    <asp:Label ID="nothingInCart" runat="server" Text="gfdgdfg"></asp:Label>
+
+                </td>
+            </tr>--%>
+
+            <tr>
+                <td>
+                    <div style="height: 100px; width: 100px; float: left; border-style: solid; border-width: 1px;">
+                        <img src="<%#Eval(" productImage") %>" height="100px" width="100px" />
+                    </div>
+                </td>
+
+                <td>
+                    <div style="height: 100px; width: 100px; float: left; border-style: solid; border-width: 1px;">
+                        <asp:Label ID="Label1" runat="server" Text="">
+                            <a href="delete_cart.aspx?id=<%#Eval(" id") %>"> remove </a>
+                        </asp:Label>
+                    </div>
+                </td>
+                <td>
+                    <div style="height: 100px; width: 100px; float: left; border-style: solid; border-width: 1px;">
+                        <asp:Label ID="Label2" runat="server" Text="">
+                            <a href="delete_cart.aspx?id=<%#Eval(" id") %>"> remove </a>
+                        </asp:Label>
+                    </div>
+                </td>
+                <td>
+                    <div style="height: 100px; width: 100px; float: left; border-style: solid; border-width: 1px;">
+                        <asp:Label ID="Label3" runat="server" Text="">
+                            <a href="delete_cart.aspx?id=<%#Eval(" id") %>"> remove </a>
+                        </asp:Label>
+                    </div>
+                </td>
+                <td>
+                    <div style="height: 100px; width: 100px; float: left; border-style: solid; border-width: 1px;">
+                        <asp:Label ID="productName" runat="server" Text="">
+                            <%--<%#Eval("productName") %>
+                            <%#Eval("productDesc") %>
+                            <%#Eval("productPrice") %>
+                            <%#Eval("productQty") %>--%>
+                            Quantity = <%#Eval("productQty") %> <br />
+                            <a href="delete_cart.aspx?id=<%#Eval(" id") %>"> remove </a>
+
+                        </asp:Label>
+                        <br />
+                    </div>
+                </td>
+
+
+            </tr>
+
+
+        </ItemTemplate>
+        <FooterTemplate>
+            </table>
+        </FooterTemplate>
+    </asp:Repeater>
+
+    <p style="text-align: center;">
+        <asp:Label ID="totalPrice" runat="server">Total Price</asp:Label>
+    </p>
+    <asp:Button ID="checkOut" runat="server" Text="Buy" OnClick="checkOut_Click1" />
+</asp:Content>

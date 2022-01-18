@@ -1,0 +1,62 @@
+﻿.orderedProductList {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+}
+
+.singleItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 0;
+    border-radius: 12px;
+    /*background-color: azure;*/
+    background: hsl(210, 36%, 96%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /*margin: 12px 0;*/
+    height: 120px;
+    padding: 0 39px 0 23px;
+}
+
+    .singleItem img {
+        width: 100px;
+        height: 100px;
+        border-radius: 7px;
+    }
+
+    .singleItem .orderInfo, a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .singleItem a {
+        text-decoration: none;
+    }
+
+
+
+.product {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* to hide the scroll bar */
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    /*background: #FF0000;*/
+}
